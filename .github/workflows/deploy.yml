@@ -2,8 +2,6 @@ name: Deploy index.html to Nginx on EC2
 
 on:
   push:
-    paths:
-      - "index.html"
     branches:
       - main
 
