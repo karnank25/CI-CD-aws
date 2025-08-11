@@ -20,7 +20,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
-          source: "site/index.html"
+          source: "index.html"
           target: "/tmp/deploy"
 
       - name: Move index.html into nginx folder with sudo
