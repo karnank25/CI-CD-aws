@@ -3,7 +3,7 @@ name: Deploy index.html to Nginx on EC2
 on:
   push:
     paths:
-      - "site/index.html"
+      - "index.html"
     branches:
       - main
 
@@ -16,7 +16,7 @@ jobs:
 
       - name: Deploy index.html to Nginx folder
         run: |
-          sudo cp site/index.html /usr/share/nginx/html/index.html
+          sudo cp index.html /usr/share/nginx/html/index.html
           sudo chown nginx:nginx /usr/share/nginx/html/index.html
           sudo systemctl restart nginx
 
